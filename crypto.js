@@ -19,10 +19,7 @@ function OTPencrypt() {
 			if (sisendCharVal + votiCharVal < 26) {// kui võtme ja sisendi liitmisel on arv suurem 26st siis toimub järgmine
 				var newCharVal = sisendCharVal + votiCharVal;//uue tähe väärtus on sisendCharVal ja votiCharVal summa
 				ciphertext += alphabet[newCharVal];//vastuse string saab juurde eelnevalt välja arvutatud tähe
-			} else if(sisendCharVal == votiCharVal) {// kui sisend ja voti on sama siis ei muutu midagi
-				ciphertext += alphabet[sisendCharVal];
-
-			}else {// kui võtme ja sisendi liitmisel saadakse arv suurem kui tähestikus tähti, siis
+			} else {// kui võtme ja sisendi liitmisel saadakse arv suurem kui tähestikus tähti, siis
 				var newCharVal = sisendCharVal + votiCharVal - 26;//lisaks liitmisele lahutatakse tähestikus olevate tähtede arv
 				ciphertext += alphabet[newCharVal];//vastuse string saab juurde eelnevalt välja arvutatud tähe
 			}
@@ -59,13 +56,14 @@ function OTPdecrypt() {
 			var sisendCharVal = alphabet.indexOf(sisend[i]);
 			var votiCharVal = alphabet.indexOf(voti[i]);
 
-			if (sisendCharVal > votiCharVal) {
+			if (sisendCharVal >= votiCharVal) {
 				var newCharVal = sisendCharVal - votiCharVal;
 				ciphertext += alphabet[newCharVal];
 
 			} else {
 				var newCharVal = sisendCharVal - votiCharVal + 25;
 				ciphertext += alphabet[newCharVal];
+
 			}
 			
 		}
