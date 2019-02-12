@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+  <head>
+  	<meta charset="UTF-8"> 
+    <title>Krüpto-Äpp</title>
+    <img src="crypto-app.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  	 <br>
+	  <textarea placeholder="Sisend (input) abcdefghijklmnopqrstuvwxyz" id="sisend" rows="4" cols="50" maxlength="254"></textarea>
+	  <br>
+	  <textarea placeholder="Võti" id="voti" rows="1" cols="50" maxlength="254"></textarea>
+	  <br>
+	  <button class="button" id="OTPencrypt" onclick="OTPencrypt()">OTP-encrypt</button>
+	  <button class="button" id="OTPdecrypt" onclick="OTPdecrypt()">OTP-decrypt</button>
+	  <button class="button" id="SHA2" onclick="SHA2()">SHA-2</button>
+	  <button class="button" id="MD5decrypt" onclick="MD5decrypt()">MD5 decrypt</button>
+	  <br>
+	<textarea id="vastus" rows="4" cols="50"></textarea>
+	<script type="text/javascript" src="crypto.js"></script>
+  </body>
+</html>
