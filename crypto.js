@@ -61,7 +61,7 @@ function OTPdecrypt() {
 				ciphertext += alphabet[newCharVal];
 
 			} else {
-				var newCharVal = sisendCharVal - votiCharVal + 26;
+				var newCharVal = sisendCharVal - votiCharVal + 25;
 				ciphertext += alphabet[newCharVal];
 			}
 			
@@ -140,7 +140,7 @@ return binb2hex(binarray);}
 
 
 function MD5decrypt() {
-	
+	alert("Sorry! Teen veel teadustööd, kuidas MD5 dekrüpteerida");
 }
 
 
