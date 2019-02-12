@@ -61,7 +61,7 @@ function OTPdecrypt() {
 				ciphertext += alphabet[newCharVal];
 
 			} else {
-				var newCharVal = sisendCharVal - votiCharVal + 25;
+				var newCharVal = sisendCharVal - votiCharVal + 26;
 				ciphertext += alphabet[newCharVal];
 
 			}
